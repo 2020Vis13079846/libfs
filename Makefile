@@ -1,10 +1,10 @@
 CC        = gcc
 CFLAGS    = -Iinclude -std=c89 -Wall -Wextra -pedantic-errors
-LDFLAGS   = -lm
+LDFLAGS   =
 
 Q         = @
 
-SRCS      := 
+SRCS      := $(shell find -name "*.c" -print -type f)
 OBJS       = $(patsubst %.c, %.o, $(SRCS))
 
 .PHONY: all test clean
